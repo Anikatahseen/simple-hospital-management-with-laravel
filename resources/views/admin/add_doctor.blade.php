@@ -5,7 +5,7 @@
     <head>
     <!-- Required meta tags -->
 
-        @include('admin.css')
+@include('admin.css')
 
     </head>
     <body>
@@ -15,15 +15,22 @@
         <!-- partial:partials/_sidebar.html -->
         @include('admin.sidebar')
         <!-- partial -->
-
         @include('admin.navbar')
 
             <!-- partial -->
-        @include('admin.body')
+        <div class="container-fluid page-body-wrapper">
+
+        <div class="container">
+
+
+
+        </div>
+
+        </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
 
-
 @include('admin.js')
+
 </body>
 </html>
