@@ -11505,7 +11505,8 @@ textarea.is-invalid.tt-hint {
   padding: 1rem 1rem;
   margin-bottom: 1rem;
   border: 1px solid transparent;
-  border-radius: 0.25rem; }
+  border-radius: 0.25rem; 
+  }
 
 .alert-heading {
   color: inherit; }
@@ -11518,7 +11519,7 @@ textarea.is-invalid.tt-hint {
   .alert-dismissible .btn-close {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 10;
     z-index: 2;
     padding: 1.25rem 1rem; }
 

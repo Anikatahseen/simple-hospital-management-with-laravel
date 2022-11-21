@@ -13,6 +13,12 @@
 
             width: 200px;
         }
+
+        button
+        {
+            float: right;
+        }
+
     </style>
 
 
@@ -34,9 +40,23 @@
         <div class="container-fluid page-body-wrapper">
 
 
+
+
+
         <div class="container" align="center" style="padding-top: 100px;">
 
-            <form action="{{url('upload_doctor')}}" method="post" enctype="multipart\form-data">
+
+            @if (Session::has('success'))
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button"class="close" data-bs-dismiss="alert">
+                        X
+                    </button>
+                    <strong>Success !</strong> {{ session('success') }}
+                </div>
+            @endif
+
+
+            <form action="{{url('upload_doctor')}}" method="post" enctype="multipart/form-data">
 
                 @csrf
 
@@ -58,7 +78,7 @@
 
                 <div style="padding: 15px;">
 
-                    <label>Specality</label>
+                    <label>specality</label>
 
                     <select name="specality" style="color: black; width: 220px;">
                         <option class="text-center">---Select---</option>
@@ -97,10 +117,6 @@
                     <input type="submit" class="btn btn-success">
 
                 </div>
-
-
-
-
 
             </form>
 
