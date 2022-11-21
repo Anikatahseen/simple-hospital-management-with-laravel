@@ -1,8 +1,8 @@
 <div class="page-section">
     <div class="container">
-    <h1 class="text-center mb-5 wow fadein">Our Doctors</h1>
+        <h1 class="text-center mb-5 wow fadein animated" style="visibility: visible; font-size:2.5rem; font-weight:700;">Our Doctors</h1>
 
-    <div class="owl-carousel wow fadein" id="doctorSlideshow">
+    <div class="owl-carousel wow fadein animated" id="doctorSlideshow">
         <div class="item">
         <div class="card-doctor">
             <div class="header">

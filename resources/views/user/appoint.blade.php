@@ -1,6 +1,6 @@
 <div class="page-section">
     <div class="container">
-    <h1 class="text-center wow fadeInUp">Make an Appointment</h1>
+        <h1 class="text-center mb-5 wow fadein animated" style="font-size:2.5rem; font-weight:700;">Make an Appointment</h1>
 
     <form class="main-form">
         <div class="row mt-5 ">
