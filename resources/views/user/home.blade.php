@@ -177,7 +177,7 @@
 @include('user.latest')
 
 
-@include('user.appoint')
+@include('user.appointment')
 
 
     <div class="page-section banner-home bg-image" style="background-image: url(../assets/img/banner-pattern.svg);">
