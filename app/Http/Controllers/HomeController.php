@@ -44,9 +44,15 @@ class HomeController extends Controller
         {
             return redirect ('home');
         }
-        $doctors = Doctor::all();
 
-        return view('user.home', compact('doctors'));
+        else
+
+        {
+            $doctors = Doctor::all();
+
+            return view('user.home', compact('doctors'));
+        }
+
     }
 
 }
