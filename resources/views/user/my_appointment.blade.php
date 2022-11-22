@@ -88,7 +88,8 @@
                 @auth
 
                 <li class="nav-item">
-                    <a class="nav-link" style="background-color: burlywood; color: white;" href="{{url('myappointment')}}">My appoinment</a>
+                    <a class="nav-link" style="background-color: RosyBrown
+                    ; color: white ; font-weight: 600; font-size: 17px;" href="{{url('myappointment')}}">My appoinment</a>
                 </li>
 
                 <x-app-layout>
@@ -115,7 +116,38 @@
         </nav>
     </header>
 
+    <div align="center" style="padding: 70px;">
 
+
+        <table class="table table-bordered border-dark">
+
+
+
+            <tr style="background-color: black;" align="center">
+                <th style="padding: 10px; font-size: 20px; color: white;">Doctor Name</th>
+                <th style="padding: 10px; font-size: 20px; color: white;">Date</th>
+                <th style="padding: 10px; font-size: 20px; color: white;">Message</th>
+                <th style="padding: 10px; font-size: 20px; color: white;">Status</th>
+                <th style="padding: 10px; font-size: 20px; color: white;">Cancel Appointment</th>
+            </tr>
+
+
+            @foreach ($appoint as $appoints)
+
+            <tr style="background-color: LightGray">
+                <td style="padding: 10px; color: black;">{{$appoints->doctor}}</td>
+                <td style="padding: 10px; color: black;">{{$appoints->date}}</td>
+                <td style="padding: 10px; color: black;">{{$appoints->message}}</td>
+                <td style="padding: 10px; color: black;">{{$appoints->status}}</td>
+                <td><a class="btn btn-warning" onclick="return confirm('are you sure to delet it?')" href="{{url('cancel_appoint',$appoints->id)}}">Cancel</a></td>
+            </tr>
+
+            @endforeach
+
+        </table>
+
+
+    </div>
 
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
 
