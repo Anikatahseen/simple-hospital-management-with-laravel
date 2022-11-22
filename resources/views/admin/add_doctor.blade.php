@@ -63,7 +63,7 @@
                 <div style="padding: 15px;">
 
                     <label>Doctor Name</label>
-                    <input type="text" style="color: black;" name="name" placeholder="Write the name">
+                    <input type="text" style="color: black;" name="name" placeholder="Write the name" required="">
 
                 </div>
 
@@ -71,7 +71,7 @@
                 <div style="padding: 15px;">
 
                     <label>Phone</label>
-                    <input type="number" style="color: black;" name="phone" placeholder="Write the number">
+                    <input type="number" style="color: black;" name="phone" placeholder="Write the number" required="">
 
                 </div>
 
@@ -80,7 +80,7 @@
 
                     <label>specality</label>
 
-                    <select name="specality" style="color: black; width: 220px;">
+                    <select name="specality" style="color: black; width: 220px;" required="">
                         <option class="text-center">---Select---</option>
                         <option value="skin">Skin</option>
                         <option value="heart">Heart</option>
@@ -95,7 +95,7 @@
                 <div style="padding: 15px;">
 
                     <label>Room No</label>
-                    <input type="text" style="color: black;" name="room" placeholder="Write the room number">
+                    <input type="text" style="color: black;" name="room" placeholder="Write the room number" required="">
 
                 </div>
 
@@ -105,7 +105,7 @@
 
                     <label>Doctor Image</label>
 
-                    <input type="file" name="file">
+                    <input type="file" name="file" required="">
 
                 </div>
 
