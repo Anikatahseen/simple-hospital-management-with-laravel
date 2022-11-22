@@ -10,6 +10,8 @@ use App\Models\Users;
 
 use App\Models\Doctor;
 
+use App\Models\Appointment;
+
 class HomeController extends Controller
 {
 
@@ -18,11 +20,13 @@ class HomeController extends Controller
 
         if (Auth::id())
         {
+
             if(Auth::user()->usertype =='0')
             {
                 $doctors = Doctor::all();
                 return view('user.home', compact('doctors'));
             }
+
 
             else
             {
@@ -31,6 +35,7 @@ class HomeController extends Controller
 
         }
 
+
         else
         {
             return redirect()->back();
@@ -38,12 +43,15 @@ class HomeController extends Controller
 
     }
 
+
     public function index()
     {
+
         if(Auth::id())
         {
             return redirect ('home');
         }
+
 
         else
 
@@ -54,5 +62,47 @@ class HomeController extends Controller
         }
 
     }
+
+
+
+    public function appointment(Request $request)
+    {
+
+        $data = new appointment;
+
+        $data->name=$request->name;
+
+        $data->email=$request->email;
+
+        $data->date=$request->date;
+
+        $data->phone=$request->number;
+
+        $data->message=$request->message;
+
+        $data->doctor=$request->doctor;
+
+        $data->status='In progress';
+
+        if(Auth::id())
+        {
+
+        $data->user_id=Auth::user()->id;
+
+        }
+
+        $data->save();
+
+        return redirect()->back()->with('success', 'Appointment added successfully. we will contact you soon');
+
+    }
+
+
+    public function myappointment()
+    {
+
+        return view('user.my_appointment');
+    }
+
 
 }

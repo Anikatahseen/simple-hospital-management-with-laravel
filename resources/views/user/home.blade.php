@@ -87,6 +87,10 @@
 
                 @auth
 
+                <li class="nav-item">
+                    <a class="nav-link" style="background-color: burlywood; color: white;" href="{{url('myappointment')}}">My appoinment</a>
+                </li>
+
                 <x-app-layout>
 
                 </x-app-layout>
@@ -110,6 +114,15 @@
         </div> <!-- .container -->
         </nav>
     </header>
+
+        @if (Session::has('success'))
+        <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button"class="close" data-dismiss="alert">
+                X
+            </button>
+            <strong>Success !</strong> {{ session('success') }}
+        </div>
+        @endif
 
     <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.jpg);">
         <div class="hero-section">
