@@ -134,12 +134,12 @@
 
             @foreach ($appoint as $appoints)
 
-            <tr style="background-color: LightGray">
-                <td style="padding: 10px; color: black;">{{$appoints->doctor}}</td>
-                <td style="padding: 10px; color: black;">{{$appoints->date}}</td>
-                <td style="padding: 10px; color: black;">{{$appoints->message}}</td>
-                <td style="padding: 10px; color: black;">{{$appoints->status}}</td>
-                <td><a class="btn btn-warning" onclick="return confirm('are you sure to delet it?')" href="{{url('cancel_appoint',$appoints->id)}}">Cancel</a></td>
+            <tr style="background-color: LightGray" align="center">
+                <td style="padding: 8px; font-size: 25px; color: black;">{{$appoints->doctor}}</td>
+                <td style="padding: 8px; font-size: 22px; color: black;">{{$appoints->date}}</td>
+                <td style="padding: 8px; font-size: 25px; color: black;">{{$appoints->message}}</td>
+                <td style="padding: 8px; font-size: 25px; color: black;">{{$appoints->status}}</td>
+                <td style="padding: 8px;"><a style="font-size: 20px; font-weight: 600;" class="btn btn-warning" onclick="return confirm('are you sure to delet it?')" href="{{url('cancel_appoint',$appoints->id)}}">Cancel</a></td>
             </tr>
 
             @endforeach
