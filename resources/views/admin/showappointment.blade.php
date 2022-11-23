@@ -20,13 +20,13 @@
 
         <div class="container-fluid">
 
-            <div class="container" align="center" style="padding-top: 100px;">
+            <div align="center" style="padding-top: 100px;">
 
                 <h1 class="text-center" style="font-size: 20px; color:white; padding-bottom: 10px; font-weight:bold;">Appointment list</h1>
 
                 <table class="table table-bordered border-light">
 
-                    <tr style="background-color: black;" align="center">
+                    <tr style="background-color: LightSalmon;" align="center">
                         <th style="padding: 10px; font-size: 15px; color: white;">Customer Name</th>
                         <th style="padding: 10px; font-size: 15px; color: white;">Email</th>
                         <th style="padding: 10px; font-size: 15px; color: white;">Phone</th>
@@ -41,14 +41,14 @@
 
                     @foreach ($data as $appoint)
 
-                    <tr style="background-color: skyblue;" align="center">
-                        <td style="padding: 10px; font-size: 15px; color: black;">{{$appoint->name}}</td>
-                        <td style="padding: 10px; font-size: 15px; color: black;">{{$appoint->email}}</td>
-                        <td style="padding: 10px; font-size: 15px; color: black;">{{$appoint->phone}}</td>
-                        <td style="padding: 10px; font-size: 15px; color: black;">{{$appoint->doctor}}</td>
-                        <td style="padding: 10px; font-size: 15px; color: black;">{{$appoint->date}}</td>
-                        <td style="padding: 10px; font-size: 15px; color: black;">{{$appoint->message}}</td>
-                        <td style="padding: 10px; font-size: 15px; color: black;">{{$appoint->status}}</td>
+                    <tr style="background-color: LightCyan;" align="center">
+                        <td style="padding: 10px; font-size: 18px; color: black;">{{$appoint->name}}</td>
+                        <td style="padding: 10px; font-size: 18px; color: black;">{{$appoint->email}}</td>
+                        <td style="padding: 10px; font-size: 18px; color: black;">{{$appoint->phone}}</td>
+                        <td style="padding: 10px; font-size: 18px; color: black;">{{$appoint->doctor}}</td>
+                        <td style="padding: 10px; font-size: 18px; color: black;">{{$appoint->date}}</td>
+                        <td style="padding: 10px; font-size: 18px; color: black;">{{$appoint->message}}</td>
+                        <td style="padding: 10px; font-size: 18px; color: black;">{{$appoint->status}}</td>
                         <td>
                             <a class="btn btn-success" href="{{url('approved',$appoint->id)}}">Approve</a>
                         </td>
