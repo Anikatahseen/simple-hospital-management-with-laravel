@@ -54,7 +54,7 @@
                         </td>
 
                         <td>
-                            <a class="btn btn-info" href="{{url('canceled',$appoint->id)}}">Canceled</a>
+                            <a onclick="return confirm('are sure to do it?')" class="btn btn-info" href="{{url('canceled',$appoint->id)}}">Canceled</a>
                         </td>
                     </tr>
 
