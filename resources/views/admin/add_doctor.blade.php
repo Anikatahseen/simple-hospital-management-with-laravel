@@ -111,8 +111,7 @@
 
                 <div style="padding: 15px;">
 
-
-                    <input type="submit" class="btn btn-success">
+                    <input class="btn btn-success" type="submit">
 
                 </div>
 
