@@ -59,7 +59,7 @@
                         </td>
 
                         <td>
-                            <a style="font-size: 15px; font-weight: 700;" href="{{url('emailview',$appoint->id)}}">Send Mail</a>
+                            <a class="btn btn-primary" href="{{url('emailview',$appoint->id)}}">Send Mail</a>
                         </td>
 
                     </tr>
