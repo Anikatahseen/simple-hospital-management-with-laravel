@@ -41,7 +41,6 @@ class AdminController extends Controller
             return redirect('login');
         }
 
-
     }
 
     public function upload(Request $request){
@@ -65,13 +64,11 @@ class AdminController extends Controller
 
     $doctor->specality=$request->specality;
 
-
     $doctor->save();
 
     return redirect()->back()->with('success', 'Doctor added successfully');
 
     }
-
 
 
     public function showappointment()
@@ -187,7 +184,6 @@ class AdminController extends Controller
             $doctor->image=$imagename;
 
         }
-
 
             $doctor->save();
 
