@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Models\Appointment;
 
-use Notification;
+use Illuminate\Support\Facades\Notification;
 
 use App\Notifications\SendEmailnotification;
 
